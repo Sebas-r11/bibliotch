@@ -14,7 +14,7 @@
         :libro="reproducer.libro"
         :edicion="reproducer.edicion"
         :usuario="reproducer.usuario"
-        :prestamo="reproducer.prestamo"
+        
       />
     </div>
   </div>

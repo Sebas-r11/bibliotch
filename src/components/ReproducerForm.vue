@@ -23,15 +23,9 @@
       inputName="usuario"
       placeholder="Ingrese usuario"
     />
-    <FormInput
-      v-model="prestamo"
-      inputLabel="Prestamo"
-      inputName="prestamo"
-      placeholder="Ingrese prestamo"
-    />
 
     <div class="mb-4">
-      <label for="type" class="block text-sm font-medium text-gray-700">Type</label>
+      <label for="type" class="block text-sm font-medium text-gray-700">Estado</label>
       <select v-model="type" id="type" class="w-full border px-3 py-2 rounded">
         <option disabled value="">Estado</option>
         <option value="prestado">❌ prestado</option>
@@ -55,25 +49,22 @@ const autor = ref('')
 const libro = ref('')
 const edicion = ref(null)
 const usuario = ref('')
-const prestamo = ref('')
 
 const success = ref(false)
 
 function handleSubmit() {
-  if (autor.value && libro.value && edicion.value > 0 && usuario.value && prestamo.value) {
+  if (autor.value && libro.value && edicion.value > 0 && usuario.value) {
     store.addReproducer({
       autor: autor.value,
       libro: libro.value,
       edicion: edicion.value,
       usuario: usuario.value,
-      prestamo: prestamo.value,
     })
 
     autor.value = ''
     libro.value = ''
     edicion.value = null
     usuario.value = ''
-    prestamo.value = ''
   }
 
   success.value = true

@@ -7,7 +7,6 @@
     <p>📖 libro: {{ libro }}</p>
     <p>📅 fecha edicion: {{ edicion }} año</p>
     <p>🧑‍🦰 usuario: {{ usuario }}</p>
-    <p>📃 prestamo: {{ prestamo }}</p>
   </div>
 </template>
 
